@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QuickScore</string>
+    <string name="start_scoring">Start Scoring</string>
+    <string name="live_scores">Watch Live Scores</string>
+    <string name="overs_per_side">Enter Overs per side</string>
+    <string name="next">next</string>
+    <string name="versus">VS</string>
+    <string name="team2">Team 2</string>
+    <string name="team1">Team 1</string>
+    <string name="rules">Rules</string>
+    <string name="powerplay">POWERPLAY</string>
+    <string name="byes">BYES</string>
+    <string name="leg_byes">LEG BYES</string>
+    <string name="lbw">LBW</string>
+    <string name="enter_power_play_overs">Enter overs</string>
+</resources>

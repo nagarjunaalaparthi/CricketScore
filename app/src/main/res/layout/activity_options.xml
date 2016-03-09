@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#0f1928"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.quickscore.custom.CustomTextView
+        android:id="@+id/start_scoring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/seperator_margin"
+        android:padding="@dimen/seperator_margin"
+        android:text="@string/start_scoring"
+        android:textColor="#E6E6E6"
+        android:textSize="@dimen/option_text_size" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/seperator" />
+
+    <com.quickscore.custom.CustomTextView
+        android:id="@+id/watch_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/seperator_margin"
+        android:padding="@dimen/seperator_margin"
+        android:text="@string/live_scores"
+        android:textColor="#E6E6E6"
+        android:textSize="@dimen/option_text_size" />
+
+</LinearLayout>

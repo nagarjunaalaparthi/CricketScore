@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/screen_background_color"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/overs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <com.quickscore.custom.CustomEditText
+            android:id="@+id/overs_edit_text"
+            style="@style/team_name_style"
+            android:inputType="phone"
+            android:layout_centerInParent="true"
+            android:hint="@string/overs_per_side" />
+
+        <ImageView
+            android:id="@+id/next_overs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/seperator_padding"
+            android:src="@drawable/next" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/next_teams">
+
+            <com.quickscore.custom.CustomEditText
+                android:id="@+id/team1"
+                style="@style/team_name_style"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/seperator_margin"
+                android:gravity="center"
+                android:hint="@string/team1" />
+
+            <com.quickscore.custom.CustomTextView
+                android:id="@+id/vs"
+                style="@style/both_wrap"
+                android:layout_below="@+id/team1"
+                android:layout_centerHorizontal="true"
+                android:text="@string/versus"
+                android:textColor="@color/blue_color"
+                android:textSize="@dimen/option_text_size"
+                android:textStyle="bold" />
+
+            <com.quickscore.custom.CustomEditText
+                android:id="@+id/team2"
+                style="@style/team_name_style"
+                android:layout_below="@+id/vs"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/seperator_margin"
+                android:gravity="center"
+                android:hint="@string/team2" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/next_teams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/seperator_padding"
+            android:src="@drawable/next" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rules_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <com.quickscore.custom.CustomTextView
+            android:id="@+id/rules"
+            style="@style/both_wrap"
+            android:layout_centerHorizontal="true"
+            android:text="@string/rules"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/splash_text_size"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/rule_seperator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/rules"
+            android:layout_marginTop="@dimen/seperator_margin"
+            android:src="@drawable/seperator" />
+
+        <LinearLayout
+            android:id="@+id/rule_options_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rule_seperator"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/seperator_padding"
+            android:paddingRight="@dimen/seperator_padding">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/seperator_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.quickscore.custom.CustomTextView
+                    style="@style/both_wrap"
+                    android:text="@string/powerplay"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/option_text_size"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/rules"
+                    android:layout_marginTop="@dimen/seperator_margin"
+                    android:src="@drawable/seperator" />
+
+                <ImageView
+                    android:id="@+id/powerplay"
+                    style="@style/both_wrap"
+                    android:layout_marginTop="@dimen/seperator_margin"
+                    android:src="@drawable/powerplay_selector" />
+
+                <com.quickscore.custom.CustomEditText
+                    android:id="@+id/powerplayovers"
+                    style="@style/team_name_style"
+                    android:visibility="invisible"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/seperator_margin"
+                    android:gravity="center"
+                    android:hint="@string/enter_power_play_overs" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/seperator_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.quickscore.custom.CustomTextView
+                    style="@style/both_wrap"
+                    android:text="@string/byes"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/option_text_size"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/rules"
+                    android:layout_marginTop="@dimen/seperator_margin"
+                    android:src="@drawable/seperator" />
+
+                <ImageView
+                    android:id="@+id/byes"
+                    style="@style/both_wrap"
+                    android:layout_marginTop="@dimen/seperator_margin"
+                    android:src="@drawable/byes_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rule_seperator"
+                android:layout_marginTop="@dimen/seperator_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.quickscore.custom.CustomTextView
+                    style="@style/both_wrap"
+                    android:text="@string/leg_byes"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/option_text_size"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/rules"
+                    android:layout_marginTop="@dimen/seperator_margin"
+                    android:src="@drawable/seperator" />
+
+                <ImageView
+                    android:id="@+id/legByes"
+                    style="@style/both_wrap"
+                    android:layout_marginTop="@dimen/seperator_margin"
+                    android:src="@drawable/legbyes_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/seperator_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.quickscore.custom.CustomTextView
+                    style="@style/both_wrap"
+                    android:text="@string/lbw"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/option_text_size"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/rules"
+                    android:layout_marginTop="@dimen/seperator_margin"
+                    android:src="@drawable/seperator" />
+
+                <ImageView
+                    android:id="@+id/lbw"
+                    style="@style/both_wrap"
+                    android:layout_marginTop="@dimen/seperator_margin"
+                    android:src="@drawable/lbw_selector" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.quickscore.custom.CustomTextView
+            android:id="@+id/rules_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rule_options_layout"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/next_padding"
+            android:text="@string/next"
+            android:textSize="@dimen/splash_text_size" />
+
+    </RelativeLayout>
+</RelativeLayout>
